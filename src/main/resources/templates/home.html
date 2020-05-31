@@ -1,0 +1,47 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"-->
+<!--          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">-->
+<!--    <title>Najlepsze przepisy</title>-->
+<!--    <link rel="stylesheet" type="text/css" href="style.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="header">-->
+<!--    <h2>Najlepsze przepisy kulinarne</h2>-->
+<!--</div>-->
+<!--<a class="body">-->
+<!--    <h1>Nasze przepisy:</h1>-->
+
+<!--    <a th:href="@{'/przepis?nazwa=' + ${recipe.name}}" class="recipe" th:each="recipe: ${recipes}">-->
+<!--        <img th:src="${recipe.img}" width="200" height="150">-->
+<!--        <div class="animal-info ml-4">-->
+<!--            <h2 th:text="${recipe.name}">Nazwa</h2>-->
+<!--            <p th:text="${recipe.description}">Opis</p>-->
+<!--        </div>-->
+<!--    </a>-->
+<!--</a>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Ksiazka kucharska</title>
+</head>
+<body>
+<h1>Najlepsze przepisy kulinarne</h1>
+
+<ul>
+    <li th:each="ksiazka: ${ksiazki}">
+        <a th:href="'/ksiazka/' + ${ksiazka.id}" th:text="${ksiazka.name}"></a>
+
+    </li>
+
+</ul>
+</body>
+</html>
